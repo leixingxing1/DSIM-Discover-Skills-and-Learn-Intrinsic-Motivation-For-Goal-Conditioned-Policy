@@ -47,7 +47,7 @@ cd rl-starter-fils
 
 Train, visualize and evaluate an agent on the `Half_Cheetah` environment:
 
-<p align="center"><img src="README-rsrc/Half_Cheetah.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/Half_Cheetah.png"></p>
 
 1. Train the agent on the `Half_Cheetah` environment with PPO algorithm:
 
@@ -55,7 +55,7 @@ Train, visualize and evaluate an agent on the `Half_Cheetah` environment:
 python3 -m scripts.train --algo ppo --env Half_Cheetah --model Half_Cheetah --save-interval 10 --frames 80000
 ```
 
-<p align="center"><img src="README-rsrc/train-terminal-logs.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/train-terminal-logs.png"></p>
 
 2. Visualize agent's behavior:
 
@@ -63,7 +63,7 @@ python3 -m scripts.train --algo ppo --env Half_Cheetah --model Half_Cheetah --sa
 python3 -m scripts.visualize --env Half_Cheetah --model Half_Cheetah
 ```
 
-<p align="center"><img src="README-rsrc/visualize-Half_Cheetah.gif"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/visualize-Half_Cheetah.gif"></p>
 
 3. Evaluate agent's performance:
 
@@ -71,7 +71,7 @@ python3 -m scripts.visualize --env Half_Cheetah --model Half_Cheetah
 python3 -m scripts.evaluate --env Half_Cheetah --model Half_Cheetah
 ```
 
-<p align="center"><img src="README-rsrc/evaluate-terminal-logs.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/evaluate-terminal-logs.png"></p>
 
 **Note:** More details on the commands are given below.
 
@@ -96,7 +96,7 @@ These files are suited for [`gym-minigrid`](https://github.com/maximecb/gym-mini
 - `model.py`
 - `utils/format.py`
 
-<h2 id="scripts-train">scripts/train.py</h2>
+<h2 id="scripts-train">rl-starter-files/scripts/train.py</h2>
 
 An example of use:
 
@@ -119,15 +119,15 @@ and a bunch of optional arguments among which:
 
 During training, logs are printed in your terminal (and saved in text and CSV format):
 
-<p align="center"><img src="README-rsrc/train-terminal-logs.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/train-terminal-logs.png"></p>
 
 **Note:** `U` gives the update number, `F` the total number of frames, `FPS` the number of frames per second, `D` the total duration, `rR:μσmM` the mean, std, min and max reshaped return per episode, `F:μσmM` the mean, std, min and max number of frames per episode, `H` the entropy, `V` the value, `pL` the policy loss, `vL` the value loss and `∇` the gradient norm.
 
 During training, logs are also plotted in Tensorboard:
 
-<p><img src="README-rsrc/train-tensorboard.png"></p>
+<p><img src="rl-starter-files/README-rsrc/train-tensorboard.png"></p>
 
-<h2 id="scripts-visualize">scripts/visualize.py</h2>
+<h2 id="scripts-visualize">rl-starter-files/scripts/visualize.py</h2>
 
 An example of use:
 
@@ -135,7 +135,7 @@ An example of use:
 python3 -m scripts.visualize --env Half_Cheetah --model Half_Cheetah
 ```
 
-<p align="center"><img src="README-rsrc/visualize-Half_Cheetah.gif"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/visualize-Half_Cheetah.gif"></p>
 
 In this use case, the script displays how the model in `storage/Half_Cheetah` behaves on the MiniGrid DoorKey environment.
 
@@ -155,7 +155,7 @@ An example of use:
 python3 -m scripts.evaluate --env Half_Cheetah --model Half_Cheetah
 ```
 
-<p align="center"><img src="README-rsrc/evaluate-terminal-logs.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/evaluate-terminal-logs.png"></p>
 
 In this use case, the script prints in the terminal the performance among 100 episodes of the model in `storage/DoorKey`.
 
@@ -171,7 +171,7 @@ and a bunch of optional arguments among which:
 
 The default model is discribed by the following schema:
 
-<p align="center"><img src="README-rsrc/model.png"></p>
+<p align="center"><img src="rl-starter-files/README-rsrc/model.png"></p>
 
 By default, the memory part (in red) and the langage part (in blue) are disabled. They can be enabled by setting to `True` the `use_memory` and `use_text` parameters of the model constructor.
 
